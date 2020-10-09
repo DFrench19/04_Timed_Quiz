@@ -10,3 +10,4 @@ I hope you enjoy!!!!https://dfrench19.github.io/04_Timed_Quiz/
 
 ![2020-10-09 (1)](https://user-images.githubusercontent.com/67846486/95546308-d879cb80-09c5-11eb-9bca-fde0a842e6a8.png)
 
+![2020-10-09 (2)](https://user-images.githubusercontent.com/67846486/95546344-f810f400-09c5-11eb-8fe1-a6c3040d8850.png)
