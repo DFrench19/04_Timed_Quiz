@@ -1,0 +1,105 @@
+body {
+    /* image for background */
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a225713-c66c-4bc4-a661-cb42f30fe0f7/dcyj1sf-2e6fc1e0-791f-43e6-b81d-d4b6b65edc0e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMmEyMjU3MTMtYzY2Yy00YmM0LWE2NjEtY2I0MmYzMGZlMGY3XC9kY3lqMXNmLTJlNmZjMWUwLTc5MWYtNDNlNi1iODFkLWQ0YjZiNjVlZGMwZS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.R8rK3A70KmBS9HoMcJK_hYR2p7IA361bbGrqnXR51cI");
+  
+    /* font parameters */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+  
+    /* added padding to prevent navbar overlap. (100 based on browser inpector of size) */
+    padding-top: 90px;
+  }
+  
+  button {
+    margin: 1em;
+  }
+  
+ 
+  
+  #navbar-title {
+    padding: 15px;
+    font-size: 30px;
+    color: #fff !important; /* TODO can we do this without the !important */
+  }
+  
+  /* container for nav header */
+  .container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+   
+  }
+  
+  
+ 
+  
+ 
+  
+  #details {
+    /* background-color: #73919b;   */
+    background-color: #020708;  
+    /* provides spacing between the top and bottom nav bars and the content */
+    margin-top: 20px;
+    margin-bottom: 40px;
+  
+    /* provide spaceing around the text */
+    padding: 40px;
+  } 
+   
+  
+  li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #897d9a;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.5;
+    list-style-type: none;
+  }
+  
+  li:hover {
+    background-color: #0a0a09;
+  }
+  
+  #answer-image {
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.25em;
+  }
+  
+
+  
+  
+  .footer-text {
+    
+    width: 100%;
+    text-align: center;
+  
+    font-size: 10px;
+    color:#fff; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container-fluid {
+    
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+  
+    li {
+      border-right: none;
+    }
+  
+  
+    .nav-link{
+      padding: 1px;
+    }
+  }
+  
