@@ -6,8 +6,7 @@ let mainEl = document.querySelector("#details");
 let timerTab = document.querySelector("#timers");
 
 
-// let questionEl = document.querySelector("#question")
-// let answersListEl = document.querySelector("#answer-list")
+
 
 // set global variables - how do we move these into localized
 var test = false;
@@ -26,7 +25,7 @@ var questionInterval;
 // draw instruction
 init();
 
-// var startButton = document.querySelector("#startQuiz");
+
 
 // function to display instructions
 function init() {
@@ -40,7 +39,7 @@ function init() {
   // creates elements with the instructions for the game
   let instructions = document.createElement("p");
   instructions.setAttribute("id", "instructions");
-  instructions.textContent = "If you score incorrectly you will not lose points, but you will be penalized time."; 
+  instructions.textContent = "If you score incorrectly you will not lose points, but you will be penalized time. To save your score, type in your initials then click spacebar."; 
 
   // adding more question - this should move into loop or function
   // creates button to start the game
@@ -81,7 +80,6 @@ function reset() {
 
 //start game
 function playQuiz(questionSet) {
-  if (test) { console.log("--- playQuiz ---"); }
   // select quiz randomize questions
   
   quiz = setUpQuestions(questionSet);
@@ -91,7 +89,6 @@ function playQuiz(questionSet) {
 
   // Start timers here
   gameDuration = quiz.length * 15;
-  if (test) { console.log("duration g,q:",gameDuration,questionDuration); }
 
   startGameTimer();
   renderTime();
@@ -102,7 +99,6 @@ function playQuiz(questionSet) {
 
 // function to get random question out of array
 function setUpQuestions(arr) {
-  if (test) {console.log("--- setUpQuestions ---");}
 
   let ranQuest = [];
 
@@ -114,10 +110,7 @@ function setUpQuestions(arr) {
 
 // function to redraw screen with  question 
 function presentQuestion() {
-  if (test) {console.log("--- presentQuestion ---");}
-  // if (test) {console.log("cur.choices[i] " + cur.choices);}
-
-  //reset time allows to answer question
+  
   questionSecElapsed = 0;
 
   // checks for no more questions and exits
@@ -160,8 +153,6 @@ function presentQuestion() {
     choiceBox.appendChild(listChoice)
   }
 
-  if (test) { console.log("cur", curQuestion);}
-
   // get answer from user
   // using the anymous function delays the invocation of the scoreAnswer
   choiceBox.addEventListener("click", function (){
@@ -171,24 +162,22 @@ function presentQuestion() {
 }
 
 function scoreAnswer(cur) {
-  if (test) { console.log("--- scoreAnswer ---");}
  
   var e = event.target;
   if ( e.matches("li")) {
     let selectedItem = e.textContent;
    
-    if (test) { console.log("selectedItem quiz " + selectedItem); }
    
     if ( selectedItem === cur.answer ) {
      
       score += questionDuration - questionSecElapsed;
     
     } else {
-      if (test) { console.log("wrong answer");}
+      
       //penelty for being wrong
       gameDuration -= 5;
     }
-  if (test) { console.log("sselected ",selectedItem);}
+  
     showAnswers(cur);
     // presentQuestion();
   }
@@ -216,8 +205,7 @@ function showAnswers(cur) {
 
 // function to set time for game timer
 function setGameTime() {
-  if (test) { console.log("--- setGameTime ---"); }
-  if (test) { console.log("gameDuration " + gameDuration); }
+
   clearInterval(gameInterval);
   gameSeconds = gameDuration;
 }

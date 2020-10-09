@@ -1,6 +1,6 @@
 body {
     /* image for background */
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a225713-c66c-4bc4-a661-cb42f30fe0f7/dcyj1sf-2e6fc1e0-791f-43e6-b81d-d4b6b65edc0e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMmEyMjU3MTMtYzY2Yy00YmM0LWE2NjEtY2I0MmYzMGZlMGY3XC9kY3lqMXNmLTJlNmZjMWUwLTc5MWYtNDNlNi1iODFkLWQ0YjZiNjVlZGMwZS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.R8rK3A70KmBS9HoMcJK_hYR2p7IA361bbGrqnXR51cI");
+    background-image: url("https://img.wallpapersafari.com/desktop/1366/768/47/54/j2mFrI.jpg");
   
     /* font parameters */
     font-family: Arial, Helvetica, sans-serif;
@@ -14,12 +14,25 @@ body {
     margin: 1em;
   }
   
- 
+  .navbar {
+    background-color: #050707;  
+    color: #ebf1f5;  
+    /* pulls everything down to push up against bottom border */
+    padding-bottom: 0;
+  
+   
+    padding-left: 0;
+  
+    /* creates solid line for the bottom border  */
+    border-bottom: solid;
+    border-bottom-color: rgb(20, 7, 141);
+    width: 100%;
+  }
   
   #navbar-title {
     padding: 15px;
     font-size: 30px;
-    color: #fff !important; /* TODO can we do this without the !important */
+    color: rgb(253, 251, 251) !important; 
   }
   
   /* container for nav header */
@@ -30,24 +43,34 @@ body {
   
   .nav-link {
     text-decoration: none;
-   
+    /* padding-left: 0%; */
+    /* padding-right: 0%; */
+     color: rgb(227, 227, 236) !important; 
   }
   
-  
- 
+  /* Change the color of links on hover */
+  .nav-link:hover {
+    /* question how do i impact these values without using important */
+    /* background-color: #4Cabc2 !important; */
+    background-color: #080c0e;  
+    
+    color: rgb(10, 6, 6);
+  }
   
  
   
   #details {
-    /* background-color: #73919b;   */
-    background-color: #020708;  
+   
+    
     /* provides spacing between the top and bottom nav bars and the content */
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   
     /* provide spaceing around the text */
     padding: 40px;
   } 
+
+
    
   
   li {
@@ -55,7 +78,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
-    background-color: #897d9a;
+    background-color: #060607;
     color: #fff;
     font-size: 1.5em;
     line-height: 1.5;
@@ -63,7 +86,7 @@ body {
   }
   
   li:hover {
-    background-color: #0a0a09;
+    background-color: #091dd1;
   }
   
   #answer-image {
@@ -74,9 +97,21 @@ body {
   
 
   
+  .footer {
+    /* set text properties */
+    background-color: rgb(10, 4, 4);
+    
+    /* sets height of footer*/
+    height: 10%;
+    
+    /* sets properties for footer border*/
+    border-top: solid;
+    border-top-color: #220de4;  
+    border-top-width: 8px;
+  }
   
   .footer-text {
-    
+    /* forces text across the entire screen so it has a center */
     width: 100%;
     text-align: center;
   
@@ -84,20 +119,20 @@ body {
     color:#fff; 
   }
   
-  
+  /* media query for screen size to be applied to center text to switch at same time as navbar */
   @media (max-width: 768px) {
     .container-fluid {
-    
+      /* removes paddding on either side */
       padding-left: 0;
       padding-right: 0;
     }
   
-  
+  /* removes verticle lines between text */
     li {
       border-right: none;
     }
   
-  
+  /* collapses space between menu options when they stack vertically*/
     .nav-link{
       padding: 1px;
     }
